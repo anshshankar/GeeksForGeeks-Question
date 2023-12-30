@@ -3,7 +3,21 @@
 class Solution:
     def sort012(self,arr,n):
         # code here
-        arr.sort()
+        o,t,z = 0,0,0
+        for i in arr:
+            if i==0:
+                z+=1
+            elif i==1:
+                o+=1
+            else:
+                t+=1
+        arr[:z] = [0]*z
+        arr[z:z+o] = [1]*o
+        arr[z+o:] = [2]*t
+        return arr
+        
+        
+        
 
 
 
