@@ -9,15 +9,15 @@ class Solution:
         maxsum = arr[0]
         
         for i in arr:
-            cursum +=i
-            
-            if cursum>maxsum:
-                maxsum = cursum
-                
+            cursum+=i
+            if maxsum<cursum:
+                maxsum=cursum
             if cursum<0:
-                cursum = 0
-                
+                cursum=0
         return maxsum
+            
+
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
